@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 780" role="img" aria-label="Scanned newsletter The Circle Times">
+  <rect width="600" height="780" fill="#efe6cf"/>
+  <rect x="24" y="24" width="552" height="732" fill="none" stroke="#6b5d3f" stroke-width="2"/>
+  <text x="300" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="bold" fill="#3b3223">The Circle Times</text>
+  <text x="300" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#3b3223">Members: our code word hides in plain sight. Read down the first letters of this issue's headings.</text>
+  <g font-family="Georgia, serif" fill="#3b3223">
+    <text x="60" y="170" font-size="24" font-weight="bold">Listening Hours</text>
+    <text x="60" y="196" font-size="15">Shortwave nights run late on Fridays. Bring a flask of tea.</text>
+    <text x="60" y="250" font-size="24" font-weight="bold">Antenna Repairs</text>
+    <text x="60" y="276" font-size="15">The roof antenna is fixed, thanks to the fundraiser.</text>
+    <text x="60" y="330" font-size="24" font-weight="bold">New Members</text>
+    <text x="60" y="356" font-size="15">Please welcome Clara Wynn, our youngest operator.</text>
+    <text x="60" y="410" font-size="24" font-weight="bold">Tuesday Meetups</text>
+    <text x="60" y="436" font-size="15">Basement, seven o'clock. Knock twice.</text>
+    <text x="60" y="490" font-size="24" font-weight="bold">Equipment Swap</text>
+    <text x="60" y="516" font-size="15">Spare valves and dials on the back table.</text>
+    <text x="60" y="570" font-size="24" font-weight="bold">Radio Etiquette</text>
+    <text x="60" y="596" font-size="15">Listen first, speak second, and always sign off kindly.</text>
+    <text x="60" y="650" font-size="24" font-weight="bold">Notes from Wren</text>
+    <text x="60" y="676" font-size="15">A good listener can hear the whole world from one small room.</text>
+  </g>
+</svg>

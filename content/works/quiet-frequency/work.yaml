@@ -1,0 +1,334 @@
+# Tutorial work. Every name, place, domain and number here is fictional.
+schemaVersion: 1
+slug: quiet-frequency
+title: The Quiet Frequency
+status: published
+creator: deepdive-team
+blurb: A friendly archivist needs help finding a time capsule left by a small-town radio club. A gentle first game.
+description: |
+  Iris, the archivist at the Halden Public Library, has found a mystery in the basement: a locked
+  time capsule left by an old amateur radio club. Help her dig through the library's website, a local
+  newspaper and a scanned newsletter to open it.
+
+  This is the DeepDive tutorial. You will learn to use the in-game browser, the search engine, mail,
+  files, notes and answer checks. No prior experience needed.
+genres: [tutorial, mystery]
+playTimeMinutes: { min: 20, max: 30 }
+difficulty: beginner
+warnings:
+  sexual_content: { intensity: none }
+  graphic_violence: { intensity: none }
+  horror: { intensity: none }
+  jump_scares: { intensity: mild, note: One sudden radio crackle sound with a brief screen shake. Nothing frightening is shown. }
+  self_harm: { intensity: none }
+  minors_harm: { intensity: none }
+  harassment_hate: { intensity: none }
+  flashing: { intensity: none }
+  real_events: { intensity: none }
+broadcast:
+  permission: allowed
+  note: Stream or record freely. Please keep puzzle answers out of titles and thumbnails.
+startUrl: https://halden-library.example/
+
+pages:
+  - id: library-home
+    url: https://halden-library.example/
+    title: Halden Public Library
+    keywords: [library, halden, home]
+    body: |
+      # Halden Public Library
+
+      Welcome to your neighbourhood library, serving the town of Halden since the year carved into our cornerstone.
+
+      - [About the library](https://halden-library.example/about)
+      - [Events this month](https://halden-library.example/events)
+      - [Our collections](https://halden-library.example/collections)
+      - [Plan your visit](https://halden-library.example/visit)
+
+      *Looking for something specific? Our archive pages are indexed by **Seek**, the town search engine.*
+
+  - id: library-about
+    url: https://halden-library.example/about
+    title: About the library
+    keywords: [history, building, cornerstone]
+    body: |
+      # About the library
+
+      The library has stood on Mill Street since its doors first opened. The original stone building
+      survived two floods and one very enthusiastic book sale.
+
+      Our cornerstone still carries its original inscription. You can see it in this
+      [photo of the cornerstone](doc:cornerstone-photo).
+
+      Today the library is run by a small staff and many volunteers, including our archivist, Iris Calloway.
+
+      [Back to the homepage](https://halden-library.example/)
+
+  - id: library-events
+    url: https://halden-library.example/events
+    title: Events this month
+    keywords: [events, calendar]
+    body: |
+      # Events this month
+
+      - **Tuesday:** Story hour for little readers
+      - **Wednesday:** Knitting circle (bring your own yarn)
+      - **Thursday:** Radio repair drop-in: bring an old radio and our volunteers will take a look
+      - **Saturday:** Used book sale
+
+      [Back to the homepage](https://halden-library.example/)
+
+  - id: library-collections
+    url: https://halden-library.example/collections
+    title: Our collections
+    keywords: [archive, collections, local history]
+    body: |
+      # Our collections
+
+      Alongside books, we keep a local history archive: photographs, letters and club records donated
+      by Halden families. Not every archive page is linked from this site. Use Seek to find them.
+
+      [Back to the homepage](https://halden-library.example/)
+
+  - id: library-visit
+    url: https://halden-library.example/visit
+    title: Plan your visit
+    keywords: [hours, visit, opening]
+    body: |
+      # Plan your visit
+
+      We are open Tuesday to Saturday, 10:00 to 18:00. Call the front desk on 555-0142.
+
+      Download our [visitor guide](doc:visitor-guide).
+
+      [Back to the homepage](https://halden-library.example/)
+
+  - id: radio-circle
+    url: https://halden-library.example/local-history/radio-circle
+    title: "Local history: the Halden Radio Circle"
+    keywords: [radio, circle, club, founder, amateur]
+    body: |
+      # The Halden Radio Circle
+
+      For many years Halden had its own amateur radio club. The Halden Radio Circle met every Tuesday
+      in the library basement, where members built receivers, traded parts and listened to faraway stations.
+
+      The Circle was founded by **Wren Talbot**, a schoolteacher who believed that "a good listener can hear
+      the whole world from one small room."
+
+      When the Circle disbanded, its members left a time capsule somewhere in the building.
+
+  - id: radio-circle-members
+    url: https://halden-library.example/local-history/radio-circle/members
+    title: "Radio Circle: member roster"
+    search: hidden_until_unlocked
+    keywords: [members, roster, newsletter]
+    body: |
+      # Halden Radio Circle: member roster
+
+      Wren Talbot (founder), Abel Marsh, Odette Fenn, Rufus Hale and Clara Wynn.
+
+      The Circle printed a newsletter every month. One issue survives in the library archive.
+      Rumour says members hid their code word inside it.
+
+      [Back to the Radio Circle page](https://halden-library.example/local-history/radio-circle)
+
+  - id: gazette-article
+    url: https://halden-gazette.example/archive/radio-circle-fundraiser
+    title: "Halden Gazette: Radio Circle raises funds for library roof"
+    keywords: [gazette, news, fundraiser, radio]
+    body: |
+      # Radio Circle raises funds for library roof
+
+      *From the Halden Gazette archive*
+
+      Members of the Halden Radio Circle held a listening night at the library last weekend and raised enough
+      to repair the roof. "We meet in the basement, so the roof matters more than you'd think," joked one member.
+
+      The Circle's founder thanked the town and invited new members to join any Tuesday.
+
+      [Read about the Circle on the library site](https://halden-library.example/local-history/radio-circle)
+
+  - id: basement
+    url: https://halden-library.example/basement
+    title: The library basement
+    search: hidden
+    scene: { jumpScare: true, skippable: true, skipText: "You found the basement. An old steel box sits under the stairs, with a brass keypad that takes four digits." }
+    sound: { asset: audio/radio-crackle.wav, sudden: true }
+    body: |
+      # The basement
+
+      *An old radio on the shelf crackles to life as you walk in!*
+
+      It quiets down again. Under the stairs sits a small steel box marked **HALDEN RADIO CIRCLE**.
+      A brass keypad on the lid takes four digits.
+
+      Open the **Answers** app to enter the code.
+
+mails:
+  - id: mail-welcome
+    from: { name: Iris Calloway, address: iris@halden-library.example }
+    subject: Welcome! Can you help me with a mystery?
+    date: Monday, 09:12
+    body: |
+      Hi there, and welcome!
+
+      I'm Iris, the archivist at the Halden Public Library. I found a locked time capsule in our basement,
+      left by an old radio club. I'd love your help opening it.
+
+      Here's how to get around:
+
+      - The **Browser** shows websites. Start with our [library homepage](https://halden-library.example/).
+      - **Seek** is the search engine. Some archive pages aren't linked anywhere, so search for them.
+        Try searching for *radio circle*.
+      - **Answers** is where you enter what you find. Your first question: who founded the club?
+      - **Notes** is your notebook. Jot things down as you go.
+
+      If you get stuck, use the Hints page. It's outside the game, so it won't spoil anything you haven't reached.
+
+      Iris
+
+  - id: mail-newsletter
+    from: { name: Iris Calloway, address: iris@halden-library.example }
+    subject: "Found it: an old newsletter"
+    date: Monday, 11:40
+    body: |
+      Wren Talbot! Of course. Thank you.
+
+      With that name I found a scan of the Circle's newsletter in our archive. I've put it in your **Files**:
+      [open the newsletter](doc:newsletter).
+
+      Members say their code word is hidden in it. Can you find it? The member roster page might be searchable now too.
+
+      Iris
+
+  - id: mail-door
+    from: { name: Iris Calloway, address: iris@halden-library.example }
+    subject: The basement door opened!
+    date: Monday, 14:05
+    body: |
+      "LANTERN" worked. The basement door is open!
+
+      Come and [see the basement](https://halden-library.example/basement). Careful: the old radios down there make noise.
+
+      Wren left a note taped to the capsule: *"The code is the year these walls first opened their doors. Ask the stone."*
+
+      Iris
+
+  - id: mail-thanks
+    from: { name: Iris Calloway, address: iris@halden-library.example }
+    subject: Thank you, detective
+    date: Monday, 16:30
+    body: |
+      It opened! Inside was a letter from Wren. I've added it to your [Files](doc:wren-letter).
+
+      You've now used every tool you need for DeepDive games. Thank you for helping a small library.
+
+      Iris
+
+documents:
+  - id: cornerstone-photo
+    title: Photo of the cornerstone
+    kind: image
+    asset: images/cornerstone.svg
+    alt: "A weathered stone block engraved with the words HALDEN PUBLIC LIBRARY and the Roman numerals MCMXXIII."
+    body: The cornerstone beside the front steps.
+    keywords: [stone, photo, inscription]
+
+  - id: visitor-guide
+    title: Visitor guide (PDF)
+    kind: pdf
+    asset: docs/visitor-guide.pdf
+    body: Opening hours, floor plan notes and library rules.
+    keywords: [guide, pdf, rules]
+
+  - id: newsletter
+    title: "Radio Circle newsletter (scan)"
+    kind: image
+    asset: images/newsletter.svg
+    alt: "A one-page newsletter titled The Circle Times with seven headings: Listening Hours, Antenna Repairs, New Members, Tuesday Meetups, Equipment Swap, Radio Etiquette, Notes from Wren."
+    keywords: [newsletter, circle times, code word]
+    body: |
+      **Transcript.** *The Circle Times*. A note at the top reads: "Members, our code word hides in plain
+      sight. Read down the first letters of this issue's headings."
+
+      1. Listening Hours
+      2. Antenna Repairs
+      3. New Members
+      4. Tuesday Meetups
+      5. Equipment Swap
+      6. Radio Etiquette
+      7. Notes from Wren
+
+  - id: wren-letter
+    title: A letter from Wren Talbot
+    kind: text
+    keywords: [letter, wren, capsule]
+    body: |
+      To whoever opens this box,
+
+      We built radios in this basement for many happy years. We never needed the fastest equipment,
+      only patience and good company. If you found this, you have both.
+
+      Keep listening.
+
+      Wren Talbot, Halden Radio Circle
+
+puzzles:
+  - id: founder
+    title: Who founded the club?
+    prompt: Iris wants to know who founded the old radio club. Enter their full name.
+    answerHashes: [sha256:d69cf03f41f4de191d2563e25625a3d7abe407d5bcd15b8b309627aca308aecf]
+    hints:
+      direction: The library's homepage doesn't link to the club's page. The search engine can find it.
+      where: In the Browser, go to Seek and search for "radio circle". Open the local history page.
+      answer: Wren Talbot.
+
+  - id: code-word
+    title: The club's code word
+    prompt: The members hid a code word in their newsletter. What is it?
+    answerHashes: [sha256:05802ee846d5c01f31d27aa0584995edafac693663f0f70a3c057aaba0b76997]
+    hints:
+      direction: The newsletter Iris sent you holds the code word "in plain sight".
+      where: Open the newsletter in Files and read the first letter of each heading, top to bottom.
+      answer: LANTERN.
+
+  - id: capsule-code
+    title: Open the time capsule
+    prompt: The capsule's keypad takes four digits. What is the code?
+    answerHashes: [sha256:ad378672792b4f9e003921aa8266d09343d4f6224a907b33bf3537a06bc8f4f8]
+    hints:
+      direction: The code is a year. Wren's note says to "ask the stone".
+      where: The About page links to a photo of the cornerstone. The year is written in Roman numerals.
+      answer: 1923 (MCMXXIII on the cornerstone).
+
+gates:
+  - id: after-founder
+    when: { solved: [founder] }
+    unlocks:
+      mails: [mail-newsletter]
+      documents: [newsletter]
+      puzzles: [code-word]
+      search: [radio-circle-members]
+  - id: after-code-word
+    when: { solved: [code-word] }
+    unlocks:
+      pages: [basement]
+      mails: [mail-door]
+      puzzles: [capsule-code]
+  - id: after-capsule
+    when: { solved: [capsule-code] }
+    unlocks:
+      mails: [mail-thanks]
+      documents: [wren-letter]
+
+ending:
+  requires: [capsule-code]
+  title: Keep listening
+  body: |
+    The lid opens with a soft click. Inside are a few hand-built radio parts, a photo of smiling club members
+    and a letter from Wren Talbot.
+
+    Iris holds the photo up to the light. "They'd be glad someone was still listening," she says.
+
+    **Thank you for playing The Quiet Frequency.** You can read [Wren's letter](doc:wren-letter) in Files.

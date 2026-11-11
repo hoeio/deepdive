@@ -1,0 +1,26 @@
+# TEST FIXTURE ONLY: a draft with an undeclared required warning. Must never appear publicly.
+schemaVersion: 1
+slug: fixture-draft
+title: "Fixture: Unfinished Draft"
+status: draft
+creator: deepdive-team
+blurb: Draft fixture that must stay hidden.
+description: Draft fixture.
+genres: [drama]
+playTimeMinutes: { min: 5, max: 10 }
+difficulty: beginner
+warnings:
+  sexual_content: { intensity: none }
+  graphic_violence: { intensity: none }
+  horror: { intensity: none }
+broadcast: { permission: allowed }
+startUrl: https://draft.example/
+pages:
+  - { id: start, url: "https://draft.example/", title: Draft, body: Draft page. }
+puzzles:
+  - id: p
+    title: Draft puzzle
+    prompt: Type draft.
+    answerHashes: [sha256:c8ccee7e3d28fe0e27e904aee9d42df1b29c256d187b5dc5ba9a6e1f1ecfd144]
+    hints: { direction: d, where: w, answer: draft }
+ending: { requires: [p], title: End, body: End. }

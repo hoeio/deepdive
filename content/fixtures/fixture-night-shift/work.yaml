@@ -1,0 +1,42 @@
+# TEST FIXTURE ONLY: strong warnings, broadcast not allowed, flashing scene node.
+schemaVersion: 1
+slug: fixture-night-shift
+title: "Fixture: Night Shift"
+status: published
+creator: deepdive-team
+blurb: Test fixture with strong warnings and broadcasting not allowed.
+description: Test fixture. A short horror-themed work used by automated tests.
+genres: [horror]
+playTimeMinutes: { min: 60, max: 90 }
+difficulty: advanced
+warnings:
+  sexual_content: { intensity: none }
+  graphic_violence: { intensity: moderate, note: Descriptions of injuries. }
+  horror: { intensity: strong, note: Sustained dread and disturbing imagery. }
+  jump_scares: { intensity: strong, note: Several sudden scares. }
+  flashing: { intensity: strong, note: A strobing light effect. }
+broadcast:
+  permission: not_allowed
+  note: Please do not stream or record this work.
+startUrl: https://night-shift.example/
+pages:
+  - id: start
+    url: https://night-shift.example/
+    title: Night Shift
+    body: |
+      # Night Shift
+      The hallway lights flicker. [Go to the stairwell](https://night-shift.example/stairwell)
+  - id: stairwell
+    url: https://night-shift.example/stairwell
+    title: Stairwell
+    scene: { flashing: true, skippable: true, skipText: "The stairwell lights strobe. A sign reads TEST." }
+    body: |
+      # Stairwell
+      The lights strobe wildly. A sign reads **TEST**.
+puzzles:
+  - id: sign
+    title: Read the sign
+    prompt: What does the sign say?
+    answerHashes: [sha256:9ce1e51882a624c9e2bedb2fc4dccf1c01209710a1b78d913fb90d3097d3fbf9]
+    hints: { direction: Look around., where: The stairwell., answer: TEST. }
+ending: { requires: [sign], title: The end, body: Fixture ending. }

@@ -1,0 +1,32 @@
+# TEST FIXTURE ONLY: broadcast allowed with spoiler restrictions, short sci-fi.
+schemaVersion: 1
+slug: fixture-orbit
+title: "Fixture: Orbit"
+status: published
+creator: deepdive-team
+blurb: Test fixture that allows streaming with spoiler restrictions.
+description: Test fixture. A tiny sci-fi work used by automated tests.
+genres: [sci_fi, puzzle]
+playTimeMinutes: { min: 10, max: 15 }
+difficulty: intermediate
+warnings:
+  sexual_content: { intensity: none }
+  graphic_violence: { intensity: none }
+  horror: { intensity: none }
+  jump_scares: { intensity: none }
+broadcast:
+  permission: allowed_with_spoiler_restrictions
+  note: Streaming is fine, but please hide the final answer.
+startUrl: https://orbit.example/
+pages:
+  - id: start
+    url: https://orbit.example/
+    title: Orbit station
+    body: The station log ends with the word ORBIT.
+puzzles:
+  - id: log
+    title: Read the log
+    prompt: What is the last word of the log?
+    answerHashes: [sha256:f997671a53a3ea52e40ae59ccce7c8bcb90840d0c0b99018be8ac63034a2d9b6]
+    hints: { direction: Read the station page., where: The last sentence., answer: ORBIT. }
+ending: { requires: [log], title: Docked, body: Fixture ending. }

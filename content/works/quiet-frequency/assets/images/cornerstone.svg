@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Cornerstone engraved HALDEN PUBLIC LIBRARY MCMXXIII">
+  <rect width="640" height="400" fill="#7d8a7a"/>
+  <rect x="80" y="70" width="480" height="260" rx="6" fill="#c9c2b2" stroke="#8f8676" stroke-width="6"/>
+  <path d="M110 120 L150 118 M420 300 L470 296 M500 110 L530 140" stroke="#a39a89" stroke-width="3"/>
+  <text x="320" y="175" text-anchor="middle" font-family="Georgia, serif" font-size="34" letter-spacing="4" fill="#4a4336">HALDEN PUBLIC LIBRARY</text>
+  <text x="320" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="54" letter-spacing="10" fill="#4a4336">MCMXXIII</text>
+</svg>
