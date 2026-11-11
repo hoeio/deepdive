@@ -1,0 +1,19 @@
+// SQLite in dev; schema kept Postgres-compatible (no SQLite-only types).
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  id        String   @id @default(cuid())
+  workSlug  String
+  reason    String
+  details   String   @default("")
+  createdAt DateTime @default(now())
+
+  @@index([workSlug])
+}

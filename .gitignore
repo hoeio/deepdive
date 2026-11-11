@@ -1,1 +1,13 @@
 graft/
+!.env.example
+/node_modules
+/.next/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+prisma/*.db
+prisma/*.db-journal
+/test-results/
+/playwright-report/
+/lighthouse/
+.env

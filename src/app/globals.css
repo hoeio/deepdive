@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Colors chosen for WCAG AA contrast (>= 4.5:1 for body text). */
+:root {
+  --bg: #f7f7f5;
+  --fg: #1b1b1f;
+  --muted: #4a4a55;
+  --card: #ffffff;
+  --line: #d4d4da;
+  --accent: #1f4fd1;
+  --accent-fg: #ffffff;
+  --warn: #8a3b00;
+  --ok: #1d6b34;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-warn: var(--warn);
+  --color-ok: var(--ok);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Rendered (sanitized) content from works. */
+.prose-ddv h1 { font-size: 1.6rem; font-weight: 700; margin: 0 0 .75rem; }
+.prose-ddv h2 { font-size: 1.25rem; font-weight: 700; margin: 1.25rem 0 .5rem; }
+.prose-ddv h3 { font-size: 1.1rem; font-weight: 600; margin: 1rem 0 .5rem; }
+.prose-ddv p, .prose-ddv ul, .prose-ddv ol, .prose-ddv blockquote, .prose-ddv pre, .prose-ddv table { margin: 0 0 .75rem; }
+.prose-ddv ul { list-style: disc; padding-left: 1.5rem; }
+.prose-ddv ol { list-style: decimal; padding-left: 1.5rem; }
+.prose-ddv a { color: var(--accent); text-decoration: underline; cursor: pointer; }
+.prose-ddv blockquote { border-left: 4px solid var(--line); padding-left: .75rem; color: var(--muted); }
+.prose-ddv code, .prose-ddv pre { font-family: var(--font-mono); background: #ececf0; padding: 0 .25rem; border-radius: 3px; }
+.prose-ddv pre { padding: .75rem; overflow-x: auto; }
+.prose-ddv img { max-width: 100%; height: auto; }
+.prose-ddv table { border-collapse: collapse; }
+.prose-ddv th, .prose-ddv td { border: 1px solid var(--line); padding: .25rem .5rem; }
+
+/* Scene effects. Disabled entirely in Reduced Mode (class never applied) and for prefers-reduced-motion. */
+@keyframes ddv-flash { 0%, 100% { background: transparent; } 50% { background: #fff6a8; } }
+@keyframes ddv-shake { 0%, 100% { transform: none; } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.fx-flashing { animation: ddv-flash .4s 4; }
+.fx-jumpscare { animation: ddv-shake .15s 4; }
+@media (prefers-reduced-motion: reduce) {
+  .fx-flashing, .fx-jumpscare { animation: none; }
+}
