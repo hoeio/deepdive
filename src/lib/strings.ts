@@ -158,6 +158,7 @@ export const en = {
     endingContinue: "Show the ending",
     endingLater: "Not yet",
     endingDone: "You finished the work",
+    endingView: "View the ending",
     endingReplay: "Back to the game",
     sceneNotice: "Heads up",
     sceneJump: "The next scene contains a jump scare (a sudden sound or movement).",
