@@ -128,6 +128,9 @@ Every assumption made while building the MVP, and why. Newest decisions go at th
 - **Lighthouse** checks the platform pages. The play shell needs consent in localStorage, so it is covered by
   keyboard-only Playwright tests instead.
 - **E2E runs against `next start`** (a production build) with fixtures enabled.
+- **CI runs inside `mcr.microsoft.com/playwright:v1.65.0-noble`.** `playwright install --with-deps` failed on
+  the hosted runner because its Ubuntu apt mirror didn't resolve. The container has the browser and its
+  libraries built in, so CI doesn't depend on apt. Keep the image tag equal to the `@playwright/test` version.
 
 ## Seed content
 
