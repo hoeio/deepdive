@@ -23,7 +23,15 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npx prisma db push --skip-generate
-      - run: npx playwright install --with-deps chromium
+      - name: Install Playwright browser
+        shell: bash
+        run: |
+          set -o pipefail
+          if ! npx playwright install --with-deps chromium 2>&1 | tee pw-install.log; then
+            # Surface the tail of the log as an annotation (readable without opening the job log).
+            echo "::error title=playwright install::$(tail -25 pw-install.log | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+            exit 1
+          fi
       - run: npm run build
       - run: npm run e2e
       - run: npm run a11y
